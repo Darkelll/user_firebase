@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build main.c",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "main.c",
+          "cJSON.o",
+          "-o",
+          "main.exe",
+          "-Icurl_lib/include",
+          "-Lcurl_lib/lib",
+          "-lcurl",
+          "-IcJSON-master"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build main.c and link with cJSON.o"
+      }
+    ]
+  }
+  
